@@ -4,9 +4,31 @@
 
 </div>
 
+<div class="demo">
+  <div [ngStyle]="{'overflow' : 'hidden', 'max-height':'60px'}">
+    {{courses | json}}
+  </div>
+  <div>
+    title : {{title | titlecase}}
+  </div>
+  <div>
+      {{price | currency: '€'}}
+  </div>
+  <div>
+    Percentage: {{rate | percent}}
+  </div>
+  <div>
+    startDate : {{startDate | date: 'MMM/dd/yyyy'}}
+  </div>
+</div>
+
+<div *ngFor="let pair of course | keyvalue">
+  {{pair.key + ': ' + pair.value}}
+</div>
+
 
 <div class="courses">
 
-    <course-card *ngFor="let course of courses; index as i;" (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i + 1"></course-card>
+    <course-card *ngFor="let course of courses | slice:0:5; index as i;" (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i + 1"></course-card>
 
 </div>
