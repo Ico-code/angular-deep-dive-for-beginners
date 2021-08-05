@@ -30,9 +30,12 @@ export class CourseCardComponent {
       return this.course && this.course.iconUrl;
     };
   cardClasses(){
-    if(this.course.category == "BEGINNER"){
-      return ['BEGINNER']
+    //if(this.course.category == "BEGINNER"){ return ['BEGINNER']};
+    return this.course.category;
+  };
+  cardStyle(){
+    return{
+      'text-decoration' : 'underline'
     }
-    //return this.course.category;
   };
 }
