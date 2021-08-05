@@ -1,3 +1,13 @@
-.course-card-beginner{
-  background-color: black;
+.course-card.BEGINNER{
+  background-color: green;
+}
+.course-card.INTERMEDIATE{
+  background-color: orange;
+
+}
+.course-card.ADVANCED{
+  background-color: lightsalmon;
+}
+.course-card.EXPERT{
+  background-color: violet;
 }

@@ -28,5 +28,11 @@ export class CourseCardComponent {
   }
   isImageVisible(){
       return this.course && this.course.iconUrl;
+    };
+  cardClasses(){
+    if(this.course.category == "BEGINNER"){
+      return ['BEGINNER']
     }
+    //return this.course.category;
+  };
 }
