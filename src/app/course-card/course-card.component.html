@@ -2,7 +2,7 @@
     [ngClass]="cardClasses()">
 
 
-    <div class="course-title" [ngStyle]="cardStyle()">
+    <div class="course-title">
         {{ cardIndex + ". " + course.description}}
     </div>
     <img mx-width="90%" width="300" alt="Angular Logo" *ngIf="isImageVisible(); else noImage" [src]="course.iconUrl">
@@ -17,5 +17,21 @@
     <div class="course-description">
         {{course.longDescription}}
     </div>
+
+    <div class="course-category" [ngSwitch]="course.category">
+      <div class="category" *ngSwitchCase="'BEGINNER'">
+        Beginner
+      </div>
+      <div class="category" *ngSwitchCase="'ADVANCED'">
+        Advanced
+      </div>
+      <div class="category" *ngSwitchCase="'INTERMEDIATE'">
+        Intermediate
+      </div>
+      <div class="category" *ngSwitchCase="'EXPERT'">
+        Expert
+      </div>
+    </div>
+
     <button (click)="onCourseViewed()">View Course</button>
 </div>

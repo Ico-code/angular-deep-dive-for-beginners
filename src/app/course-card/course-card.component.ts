@@ -33,9 +33,4 @@ export class CourseCardComponent {
     //if(this.course.category == "BEGINNER"){ return ['BEGINNER']};
     return this.course.category;
   };
-  cardStyle(){
-    return{
-      'text-decoration' : 'underline'
-    }
-  };
 }

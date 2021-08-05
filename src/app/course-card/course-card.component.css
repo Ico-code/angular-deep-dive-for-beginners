@@ -6,8 +6,12 @@
 
 }
 .course-card.ADVANCED{
-  background-color: lightsalmon;
+  background-color: rgb(158, 49, 0);
 }
 .course-card.EXPERT{
   background-color: violet;
+}
+
+.category{
+  color: white;
 }
