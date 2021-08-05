@@ -3,6 +3,13 @@
 export const COURSES: any = [
 
     {
+        id: 0,
+        description: "Angular Core Deep Dive",
+        longDescription: "A detailed walk-through of the most important part of Angular - the Core and Common modules",
+        category: 'INTERMEDIATE',
+        lessonsCount: 10
+    },
+    {
         id: 1,
         description: "Angular Core Deep Dive",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
@@ -10,6 +17,7 @@ export const COURSES: any = [
         category: 'INTERMEDIATE',
         lessonsCount: 10
     },
+
     {
         id: 2,
         description: "RxJs In Practice Course",

@@ -7,7 +7,7 @@ import {Course} from '../model/course';
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css']
 })
-export class CourseCardComponent implements OnInit {
+export class CourseCardComponent {
 
   @Input()
   course:Course;
@@ -26,5 +26,7 @@ export class CourseCardComponent implements OnInit {
     console.log("card component - button clicked ...");
     this.courseEmitter.emit(this.course);
   }
-  
+  isImageVisible(){
+      return this.course && this.course.iconUrl;
+    }
 }
