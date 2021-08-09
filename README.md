@@ -3,7 +3,7 @@
 
 This repository contains the code of the [Angular Core Deep Dive](https://angular-university.io/course/angular-course).
 
-This course repository is updated to Angular v11:
+This course repository is updated to Angular v12.
 
 ![Angular Core Deep Dive](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png)
 
@@ -11,7 +11,6 @@ This course repository is updated to Angular v11:
 # Installation pre-requisites
 
 IMPORTANT: Please use Node 14 (Long Term Support version).
-
 
 # Installing the Angular CLI
 
@@ -156,4 +155,3 @@ If you are looking for the Complete Typescript 2 Course - Build a REST API, the 
 
 ![Complete Typescript Course](https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png)
 
-# angular deep dive for beginners
