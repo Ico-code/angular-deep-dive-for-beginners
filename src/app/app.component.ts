@@ -14,6 +14,7 @@ import { CoursesService } from './services/courses.service';
 })
 export class AppComponent implements OnInit {
 
+  course = COURSES;
   courses$ : Observable<Course[]>;
 
   constructor(private http: HttpClient, 
@@ -23,16 +24,16 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(this.coursesService)
-    const params = new HttpParams()
-    .set("page","1")
-    .set("pageSize","10");
-
-    this.courses$ = this.http.get<Course[]>("/api/courses", {params})
-
+    this.courses$ = this.coursesService.loadCourse();
+    console.log(this.course)
   }
 
-
+  save(course:Course){
+    this.coursesService.saveCourse(course)
+    .subscribe(
+      () => console.log("Course Saved!")
+    );
+  }
 
 
 }
